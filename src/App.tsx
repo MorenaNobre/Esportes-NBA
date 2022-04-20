@@ -9,18 +9,18 @@ type Team = {
 function App() {
   const [teams, setTeams] = useState<Team[]>([]);
 
-  useEffect(() => {
-    fetch("https://api-nba-v1.p.rapidapi.com/teams")
-      .then((response) => response.json())
-      .then((data) => {
-        setTeams(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://api-nba-v1.p.rapidapi.com/teams")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setTeams(data);
+  //     });
+  // }, []);
 
   return (
     <>
-      <h1>mother fucker</h1>
-      <ul>
+      <h1>Hello World!</h1>
+      {/* <ul>
         {teams.map((team) => {
           return (
             <li key={team.name}>
@@ -30,7 +30,7 @@ function App() {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </>
   );
 }

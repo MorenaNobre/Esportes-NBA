@@ -1,52 +1,46 @@
-import axios from "axios"
-import api from "./services/api"
-// import { useAPI } from "./hooks/useAPI";
+import { useEffect, useState } from "react";
 
-// type Team = {
-//   name: string;
-//   nickname: string;
-//   logo: string;
-// };
+type Team = {
+  name: string;
+  nickname: string;
+  logo: string;
+};
 
 function App() {
-  // const { data } = useAPI<Team[]>("https://api-basketball.p.rapidapi.com/teams")
-  // const { data } = useAPI<Team[]>("options")
+  const [teams, setTeams] = useState<Team[]>([]);
 
-  const axios = require("axios");
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "api-basketball.p.rapidapi.com",
+        "X-RapidAPI-Key": "XxXxXxXxXxX",
+      },
+    };
 
-  const options = {
-    method: "GET",
-    url: "https://api-basketball.p.rapidapi.com/teams",
-    headers: {
-      "X-RapidAPI-Host": "api-basketball.p.rapidapi.com",
-      "X-RapidAPI-Key": "eb38d95969mshf802fa7076ec9abp19bbe5jsnb91973967047",
-    },
-  };
-
-  axios
-    .request(options)
-    .then(function (response:Response) {
-      console.log(options);
-    })
-    .catch(function (error:Error) {
-      console.error(error);
-    });
-
+    fetch(
+      "https://api-nba-v1.p.rapidapi.com/teams",
+      options
+    )
+      .then((response) => response.json())
+      .then(data => {
+        setTeams(data)
+      })
+      .catch((err) => console.error(err));
+  }, []);
+  
   return (
-    <>
-      <h1>Hello World!</h1>
-      {/* <ul>
-        {data?.map((team) => {
-          return (
-            <li key={team.name}>
-              <img src={team.logo} alt="team logo" />
-              <strong>{team.name}</strong>
-              <p>{team.nickname}</p>
-            </li>
-          );
-        })}
-      </ul> */}
-    </>
+    <ul>
+      {teams.map(team => {
+        return (
+          <li key={team.name}>
+            <img src={team.logo} alt="Team logo" />
+            <strong>{team.name}</strong>
+            <p>{team.nickname}</p>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 

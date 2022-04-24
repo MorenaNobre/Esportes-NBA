@@ -1,9 +1,15 @@
-import Teams from "./components/Teams";
+// import Players from "./components/Players";
+// import Teams from "./components/Teams";
+import GlobalStyle from "./globalStyles";
+import Home from "./pages/Home";
 
 function App() {
-  return(
-    <Teams />
-  )
+  return (
+    <>
+      <GlobalStyle />
+      <Home />
+    </>
+  );
 }
 
 export default App;

@@ -13,8 +13,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  margin-top: 250px;
-  /* padding: 0 50px; */
+  padding: 0 50px;
 `;
 
 export const MainHeading = styled.h1`

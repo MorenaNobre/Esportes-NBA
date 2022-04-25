@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "../../globalStyles";
+import { Button, Container } from "../../globalStyles";
 
 export const HeroSection = styled.section`
   width: 100%;
@@ -27,6 +27,15 @@ export const HeroVideo = styled.div`
     width: 100%;
     z-index: 1;
   }
+`;
+
+export const HeroContainer = styled(Container)`
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+  margin-top: 250px;
+  ${Container}
 `;
 
 export const HeroText = styled.p`

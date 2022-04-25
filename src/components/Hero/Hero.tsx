@@ -1,7 +1,8 @@
-import { Container, MainHeading } from "../../globalStyles";
+import { MainHeading } from "../../globalStyles";
 import {
   ButtonWrapper,
   HeroVideo,
+  HeroContainer,
   HeroSection,
   HeroText,
   HeroButton,
@@ -25,13 +26,13 @@ export default function Hero() {
             />
           </section>
         </HeroVideo>
-        <Container>
+        <HeroContainer>
           <MainHeading>We are NBA</MainHeading>
           <HeroText>Get to know all the NBA teams and their players</HeroText>
           <ButtonWrapper>
             <HeroButton>Teams below</HeroButton>
           </ButtonWrapper>
-        </Container>
+        </HeroContainer>
       </HeroSection>
     </>
   );

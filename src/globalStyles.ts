@@ -56,30 +56,6 @@ export const Section = styled.section`
   height: auto;
 `;
 
-export const Row = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 8px;
-  margin: 8px;
-  width: auto;
-  height: auto;
-  flex-wrap: wrap;
-`;
-
-export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  padding: 8px;
-  margin: 8px;
-  width: auto;
-  height: auto;
-`;
-
 export const Button = styled.button`
   border-radius: 4px;
   background: none;

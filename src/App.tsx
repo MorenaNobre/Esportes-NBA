@@ -1,5 +1,3 @@
-// import Players from "./components/Players";
-// import Teams from "./components/Teams";
 import GlobalStyle from "./globalStyles";
 import Home from "./pages/Home";
 

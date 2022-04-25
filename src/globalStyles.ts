@@ -12,19 +12,15 @@ const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   width: 100%;
   max-width: 1300px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 50px;
-
-  @media screen and (max-width: 960px) {
-    padding: 0 30px;
-  }
+  margin: 0 auto;
+  margin-top: 250px;
+  /* padding: 0 50px; */
 `;
 
 export const MainHeading = styled.h1`
   font-size: clamp(2.3rem, 6vw, 4.5rem);
   margin-bottom: 2rem;
-  color: red;
+  color: #fff;
   width: 100%;
   letter-spacing: 4px;
   text-align: center;
@@ -41,6 +37,7 @@ export const Heading = styled.h2`
   text-align: center;
   width: 100%;
 `;
+
 export const TextWrapper = styled.span`
   color: red;
   font-size: 1rem;
@@ -51,6 +48,7 @@ export const TextWrapper = styled.span`
   margin-bottom: 8px;
   margin-top: 8px;
 `;
+
 export const Section = styled.section`
   padding: 140px 0;
   margin: 20px;
@@ -89,15 +87,16 @@ export const Button = styled.button`
   white-space: nowrap;
   padding: 10px 20px;
   font-size: 16px;
-  color: red;
+  font-weight: bold;
+  color: #05ea91;
   outline: none;
-  border: 2px solid red;
+  border: 4px solid #05ea91;
   cursor: pointer;
   overflow: hidden;
   position: relative;
 
   &:before {
-    background: red;
+    background: #05ea91;
     content: "";
     position: absolute;
     top: 50%;
@@ -115,7 +114,7 @@ export const Button = styled.button`
   }
 
   &:hover {
-    color: black;
+    color: #fff;
   }
 `;
 
